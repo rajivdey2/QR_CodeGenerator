@@ -4,7 +4,7 @@ function App() {
   const [text , setText]= useState("");
   const [data, setData] = useState("");
   const fetchData = async () => {
-    const res = await fetch("http://localhost:8000/api",{
+    const res = await fetch("https://qr-codegenerator.onrender.com/api",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
