@@ -1,42 +1,91 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Retro neon vibes */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1b1b3a, #2c003e);
+  background-size: 300% 300%;
+  animation: bgMove 10s infinite alternate;
+  font-family: 'Press Start 2P', cursive;
+  color: #e0e0e0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.container {
   text-align: center;
+  padding: 2rem;
+  border: 3px solid #ff00ff;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+input {
+  padding: 0.8rem;
+  width: 80%;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  background: black;
+  color: #00ffff;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input::placeholder {
+  color: #777;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  margin: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #ff00ff;
+  background: black;
+  color: #ff00ff;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
 }
 
-.card {
-  padding: 2em;
+button:hover {
+  background: #ff00ff;
+  color: black;
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
 }
 
-.read-the-docs {
-  color: #888;
+.qr-container {
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.qr-container img {
+  border: 4px solid #00ffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #00ffff;
+  max-width: 250px;
+}
+
+.qr-container a {
+  display: block;
+  margin-top: 1rem;
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.qr-container a:hover {
+  color: #ff00ff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
